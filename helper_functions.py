@@ -14,7 +14,7 @@ shirt', 'jacket', 'trouser', 'sneaker', 'backpack', 'belt', or 'shoe' to filter 
     brand: Optional string, to filter items by brand (e.g., 'Lacoste', 'Ralph Lauren').
 
   Returns:
-    A JSON string of a list of dictionaries, whre each dictionary represents a clothing item.
+    A list of dictionaries, where each dictionary represents a clothing item.
   """
   # Using the database name specified by the user
   lacoste_db = client['web_scrap']
@@ -56,4 +56,4 @@ shirt', 'jacket', 'trouser', 'sneaker', 'backpack', 'belt', or 'shoe' to filter 
     elif sort_order == 'cheapest':
         retrieved_data = retrieved_data.sort("price", 1)
   data_list = list(retrieved_data)  # consume cursor ONCE
-  return json.dumps(data_list)
+  return (data_list)
