@@ -6,10 +6,9 @@ def get_clothes(limit=None, sort_order=None, item_type=None, color=None, brand=N
   Retrieves clothing items specifically from the 'lacoste' collection.
 
   Args:
-    limit: Optional integer, the maximum number of items to retrieve.
+    limit: Optional integer, the maximum number of items to retrieve or use to control the number of results.
     sort_order: Optional string, 'cheapest' or 'expensive' to sort by price.
-shirt', 'jacket', 'trouser', 'sneaker', 'backpack', 'belt', or 'shoe' to filter by item type(s).
-    item_type: Optional string or list of strings, 'polo', '
+    item_type: Optional string or list of strings, 'polo', 'shirt', 'jacket', 'trouser', 'sneaker', 'backpack', 'belt', or 'shoe' to filter by item type(s).
     color: Optional string or list of strings, to filter items by color (e.g., 'dark', 'beige', or ['red', 'blue']).
     brand: Optional string, to filter items by brand (e.g., 'Lacoste', 'Ralph Lauren').
 
