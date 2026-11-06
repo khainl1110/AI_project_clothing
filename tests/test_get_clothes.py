@@ -1,4 +1,4 @@
-from helper_functions import get_clothes
+from services.clothing_service import get_clothes
 import json
 
 def test_get_clothes():

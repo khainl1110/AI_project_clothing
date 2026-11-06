@@ -3,3 +3,5 @@ python-dotenv
 pytest
 langchain
 langchain-mistralai
+langchain-openai
+openai

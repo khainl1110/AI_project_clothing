@@ -1,6 +1,6 @@
 from langchain_core.tools import tool
 
-from helper_functions import get_clothes
+from services.clothing_service import get_clothes
 
 
 @tool

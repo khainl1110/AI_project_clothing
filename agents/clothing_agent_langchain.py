@@ -5,7 +5,7 @@ from langchain.agents import create_agent
 from langchain.tools import tool
 from langchain_openai import ChatOpenAI
 
-from helper_functions import get_clothes
+from services.clothing_service import get_clothes
 from prompts.clothing_assistant import CLOTHING_ASSISTANT_PROMPT
 
 
