@@ -25,10 +25,12 @@ def search_clothes(
         brand: Brand to search for, such as Lacoste.
         item_type: Clothing type, such as polo or t-shirt.
         color: Desired color, such as red or navy.
-        price_floor: Minimum price.
-        price_ceiling: Maximum price.
+        price_floor: Minimum allowed product price (exclusive).
+             Set this when the user specifies a minimum price.
+        price_ceiling: Maximum allowed product price (exclusive).
+               Set this when the user specifies a maximum price.
         sort_order: 'cheapest' or 'expensive'.
-        limit: Maximum number of products to return.
+        limit: The number of products to return.
     """
     if limit < 1 or limit > 20:
         return "Error: limit must be between 1 and 20."

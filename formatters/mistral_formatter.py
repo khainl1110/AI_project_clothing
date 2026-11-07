@@ -8,7 +8,7 @@ class MistralFormatter(OpenAIChatFormatter):
         messages = await super().format(msgs)
 
         for message in messages:
-            if message["role"] in ("system", "user"):
+            if message["role"] != "tool":
                 message.pop("name", None)
 
         return messages

@@ -6,7 +6,6 @@ from agentscope.agent import Agent
 from agentscope.credential import OpenAICredential
 from agentscope.model import OpenAIChatModel
 
-from formatters import mistral_formatter
 from formatters.mistral_formatter import MistralFormatter
 from tools.clothing_tools import build_clothing_toolkit
 from prompts.clothing_assistant import CLOTHING_ASSISTANT_PROMPT
@@ -25,9 +24,9 @@ def build_clothing_agent():
         stream=False
     )
 
-    print("Formatter:", model.formatter)
-    print("Formatter class:", type(model.formatter))
-    print("Bound format signature:", inspect.signature(model.formatter.format))
+    # print("Formatter:", model.formatter)
+    # print("Formatter class:", type(model.formatter))
+    # print("Bound format signature:", inspect.signature(model.formatter.format))
 
     return Agent(
         name="ClothingAssistant",

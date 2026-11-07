@@ -6,7 +6,7 @@ def get_clothes(limit=None, sort_order=None, item_type=None, color=None, brand=N
   Retrieves clothing items specifically from the 'lacoste' collection.
 
   Args:
-    limit: Optional integer, the maximum number of items to retrieve or use to control the number of results.
+    limit: Optional integer, the number of clothes to retrieve
     sort_order: Optional string, 'cheapest' or 'expensive' to sort by price.
     item_type: Optional string or list of strings, 'polo', 'shirt', 'jacket', 'trouser', 'sneaker', 'backpack', 'belt', or 'shoe' to filter by item type(s).
     color: Optional string or list of strings, to filter items by color (e.g., 'dark', 'beige', or ['red', 'blue']).
@@ -44,6 +44,17 @@ def get_clothes(limit=None, sort_order=None, item_type=None, color=None, brand=N
 
   if price_query:
     query['price'] = price_query
+
+  print("Input parameters:")
+  print({
+      "brand": brand,
+      "item_type": item_type,
+      "color": color,
+      "price_floor": price_floor,
+      "price_ceiling": price_ceiling,
+      "sort_order": sort_order,
+      "limit": limit,
+  })
   print("MongoDB query", query)
   retrieved_data = collection.find(query, {'_id': 0})
   if limit is not None:

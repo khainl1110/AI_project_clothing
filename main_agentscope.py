@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from agentscope.message import Msg, UserMsg
 from openai import APIStatusError
 from agents.clothing_agent_agentscope import build_clothing_agent
-from formatters.mistral_formatter import MistralFormatter
 
 async def main():
 
